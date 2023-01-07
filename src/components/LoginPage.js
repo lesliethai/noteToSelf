@@ -4,15 +4,15 @@ const LoginPage = () => {
     
     console.log('LoginPage has rendered.');
 
-    const [ login, setLogin ] = useState(false);
 
-    const handleClick = () => {
-        setLogin(!login);
-    }
+    // const handleClick = () => {
+    //     setLogin(!login);
+    // }
 
     return (
-        <header>
-            <h1>NTS</h1>
+        <>
+            <p>please log in</p>
+            {/* <h1>NTS</h1>
             <img src="http://placekitten.com/g/200/200" alt="img placeholder" />
             <h2>Login</h2>
             <form action="#" method="#" className="loginForm">
@@ -23,8 +23,8 @@ const LoginPage = () => {
                 <input type="password" id="password" placeholder="password"></input>
 
                 <button onClick={handleClick}>Login</button>
-            </form>
-        </header>
+            </form> */}
+        </>
     )
 }
 

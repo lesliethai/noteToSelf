@@ -1,9 +1,13 @@
+import Header from './Header';
+import Body from './Body';
+
 const HomePage = () => {
     console.log("HomePage has rendered.");
 
     return (
         <>
-        <h1>welcome</h1>
+        <Header />
+        <Body />
         </>
     )
 }
