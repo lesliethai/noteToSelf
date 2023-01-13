@@ -1,19 +1,24 @@
 import { useState, useEffect } from 'react';
 import firebase from '../firebase';
-import { getDatabase, ref, onValue } from 'firebase/database';
+import { getDatabase, ref, onValue, remove } from 'firebase/database';
 
 const NotesList = () => {
     console.log('NotesList has rendered.');
 
     // initalize state to keep track of adding note
     const [notes, setNotes] = useState([]);
+    
+    // initializing database
+    const database = getDatabase(firebase);
+    const dbRef = ref(database);
+
+    const handleDelete = (notesKey) => {
+        const dbRefDelete = ref(database, `${notesKey}`);
+        remove(dbRefDelete);
+    }
 
     // utilize useEffect to run on component load to gather current information in da
     useEffect(() => {
-        // initializing database
-        const database = getDatabase(firebase);
-        const dbRef = ref(database);
-
         // access database information in object
         onValue(dbRef, (noteData) => {
             console.log(noteData.val());
@@ -36,20 +41,16 @@ const NotesList = () => {
         })
     }, []);
 
-    const test = notes.map((note) => {
-        return (
-            <li>{note}</li>
-        )
-    })
-
-    console.log(test)
     return (
         <>
             <ul>
                 {
                     notes.map((note) => {
                         return (
+                            <>
                             <li key={note.key}>{note.title}</li>
+                            <button onClick={() => handleDelete(note.key)}>Delete</button>
+                            </>
                         )
                     })
                 }

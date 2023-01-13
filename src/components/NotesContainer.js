@@ -19,7 +19,7 @@ const NotesContainer = () => {
         <section>
             <h2>Notes</h2>
             {/* open note input on click & disable button until note added */}
-            <button onClick={handleClick} disabled={noteInput}>+ add note</button>
+            <button onClick={handleClick}>+ add note</button>
 
             {/* on click, show input */}
             {
