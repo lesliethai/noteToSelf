@@ -1,0 +1,40 @@
+.wrapper {
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    border: 1px solid transparent;
+    transition: 300ms;
+
+    &:hover,
+    &:focus {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
