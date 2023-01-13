@@ -1,4 +1,5 @@
 import NotesList from './NotesList';
+import NoteForm from './NoteInput';
 import { useState } from 'react';
 
 
@@ -17,12 +18,13 @@ const NotesContainer = () => {
         <>
         <section>
             <h2>Notes</h2>
-            <button onClick={handleClick}>+ add note</button>
+            {/* open note input on click & disable button until note added */}
+            <button onClick={handleClick} disabled={noteInput}>+ add note</button>
 
             {/* on click, show input */}
             {
                 noteInput
-                    ? <input type="text" id="note" placeholder="input note"/>
+                    ? <NoteForm />
                     : null
             }
             <NotesList />

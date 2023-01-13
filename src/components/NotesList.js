@@ -36,13 +36,20 @@ const NotesList = () => {
         })
     }, []);
 
+    const test = notes.map((note) => {
+        return (
+            <li>{note}</li>
+        )
+    })
+
+    console.log(test)
     return (
         <>
             <ul>
                 {
-                    notes.map((note, key) => {
+                    notes.map((note) => {
                         return (
-                            <li key={key}>{note}</li>
+                            <li key={note.key}>{note.title}</li>
                         )
                     })
                 }
