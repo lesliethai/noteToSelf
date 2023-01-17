@@ -1,5 +1,5 @@
 import NotesList from './NotesList';
-import NoteForm from './NoteInput';
+import NoteForm from './NoteForm';
 import { useState } from 'react';
 
 
@@ -13,6 +13,7 @@ const NotesContainer = () => {
 
     // initalize state to keep track of note input
     const [ noteInput, setNoteInput ] = useState(false);
+    const [userInput, setUserInput] = useState('');
 
     return (
         <>
@@ -24,10 +25,10 @@ const NotesContainer = () => {
             {/* on click, show input */}
             {
                 noteInput
-                    ? <NoteForm />
+                    ? <NoteForm userInput={userInput} setUserInput={setUserInput}/>
                     : null
             }
-            <NotesList />
+            <NotesList userInput={userInput} setUserInput={setUserInput}/>
         </section>
         </>
     )

@@ -1,0 +1,13 @@
+.loginBgContainer {
+    display: flex; 
+    background: blue;
+    height: calc(100vh - 67px);
+
+    h2 {
+        width: 30%;
+    }
+
+    img {
+        width: 50%;
+    }
+}

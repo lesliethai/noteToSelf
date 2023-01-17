@@ -14,7 +14,7 @@ const LoginPage = () => {
 
     return (
         <>
-            <header>
+            <header className="wrapper">
                 <h1>NTS</h1>
                 
                 {/* if logged in, show user img; if not, show nothing*/}

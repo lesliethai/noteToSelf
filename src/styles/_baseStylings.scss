@@ -31,10 +31,14 @@ button {
     border: 1px solid transparent;
     transition: 300ms;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background: white;
         color: black;
         border: 1px solid black;
     }
+}
+
+textarea {
+    resize: none;
+    border: none;
 }
