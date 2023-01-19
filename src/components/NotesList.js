@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import firebase from '../firebase';
-import { getDatabase, ref, onValue, remove, push, update } from 'firebase/database';
+import { getDatabase, ref, onValue, remove, set, update } from 'firebase/database';
 
-const NotesList = (props) => {
+const NotesList = () => {
     console.log('NotesList has rendered.');
 
     // initalize state to keep track of adding note
@@ -12,20 +12,11 @@ const NotesList = (props) => {
     // initializing database
     const database = getDatabase(firebase);
     const dbRef = ref(database);
-
+    
     const handleDelete = (notesKey) => {
-        const dbRefDelete = ref(database, `${notesKey}`);
-        remove(dbRefDelete);
+        const dbRefChild = ref(database, `${notesKey}`);
+        remove(dbRefChild);
     }
-
-    // const checkHandleUpdate = (notes) => {
-    //     // const dbRefUpdate = ref(database, `${notes.data}`);
-    //     update(dbRef, `${notes.data}`);
-    // }
-
-
-
-    // try doing function to check for change thru state, and then one to update change on submit button (and push thru)
 
     // utilize useEffect to run on component load to gather current information in da
     useEffect(() => {
@@ -50,9 +41,10 @@ const NotesList = (props) => {
         })
     }, []);
 
-    const updateHandler = (e) => {
+    const updateHandler = (e, notesKey) => {
         e.preventDefault();
-        update(dbRef, updateNote);
+        const dbRefChild = ref(database, `${notesKey}`);;
+        return set(dbRefChild, updateNote);
     }
 
     const checkUpdate = (e) => {
@@ -66,26 +58,25 @@ const NotesList = (props) => {
     let year = date.getFullYear();
     let currentDate = `${month} ${day} ${year}`
 
+
     return (
         <>
             <ul className="formUl">
                 {
                     notes.map((note) => {
                         return (
-                            <>
                             <li key={note.key} className="formLi">
                                 <form action="#" method="#" className="notesForm">
                                     <label htmlFor="noteTextarea" className="srOnly">note:</label>
-                                    <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate}>{note.title}</textarea>
+                                    <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title}>{note.title}</textarea>
 
                                     <button onClick={() => handleDelete(note.key)} className="deleteButton">Delete</button>
 
-                                    <button onClick= {updateHandler} className="updateButton">Update</button>
+                                    <button onClick= {(e) => updateHandler(e, note.key)} className="updateButton">Update</button>
 
                                     <span>Date: </span><span>{currentDate}</span>
                                 </form>
                             </li>
-                            </>
                         )
                     })
                 }

@@ -1,7 +1,10 @@
 .loginBgContainer {
-    display: flex; 
-    background: blue;
-    height: calc(100vh - 67px);
+    background: $primaryColor;
+    height: calc(100vh - 57.9167px);
+
+    .wrapper {
+        display: flex; 
+    }
 
     h2 {
         width: 30%;
@@ -9,5 +12,15 @@
 
     img {
         width: 50%;
+    }
+}
+
+.headerNav {
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+    .wrapper {
+    display: flex;
+    justify-content: space-between;
     }
 }

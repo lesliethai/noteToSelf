@@ -14,22 +14,24 @@ const LoginPage = () => {
 
     return (
         <>
-            <header className="wrapper">
-                <h1>NTS</h1>
-                
-                {/* if logged in, show user img; if not, show nothing*/}
-                {
-                    login
-                    ? 'user img here'
-                    : null
-                }
+            <header className="headerNav">
+                <div className="wrapper">
+                    <h1>NTS</h1>
+                    
+                    {/* if logged in, show user img; if not, show nothing*/}
+                    {
+                        login
+                        ? 'user img here'
+                        : null
+                    }
 
-                {/* change button text depending on login state */}
-                <button onClick={handleClick}>{
-                    login
-                        ? 'Log out'
-                        : 'Log in'
-                }</button>
+                    {/* change button text depending on login state */}
+                    <button onClick={handleClick}>{
+                        login
+                            ? 'Log out'
+                            : 'Log in'
+                    }</button>
+                </div>
             </header>
             {/* <form action="#" method="#" className="loginForm">
                 <label htmlFor="username" className="srOnly">username:</label>

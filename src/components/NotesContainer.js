@@ -13,7 +13,6 @@ const NotesContainer = () => {
 
     // initalize state to keep track of note input
     const [ noteInput, setNoteInput ] = useState(false);
-    const [userInput, setUserInput] = useState('');
 
     return (
         <>
@@ -25,10 +24,10 @@ const NotesContainer = () => {
             {/* on click, show input */}
             {
                 noteInput
-                    ? <NoteForm userInput={userInput} setUserInput={setUserInput}/>
+                    ? <NoteForm />
                     : null
             }
-            <NotesList userInput={userInput} setUserInput={setUserInput}/>
+            <NotesList />
         </section>
         </>
     )

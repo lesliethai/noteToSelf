@@ -1,6 +1,10 @@
 header {
     min-width: 100%;
-    background: red;
+    background: $secondaryColor;
+
+    h1 {
+        color: $white;
+    }
     
     .wrapper {
         display: flex;
