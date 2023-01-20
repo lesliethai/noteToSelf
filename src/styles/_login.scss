@@ -1,17 +1,19 @@
 .loginBgContainer {
-    background: $primaryColor;
-    height: calc(100vh - 57.9167px);
+    height: calc(100vh - 65.5333px);
+    width: 100%;
 
     .wrapper {
         display: flex; 
+        align-items: center;
     }
 
     h2 {
+        color: rgba($color: $black, $alpha: 0.8);
         width: 30%;
     }
 
     img {
-        width: 50%;
+        width: 80%;
     }
 }
 
@@ -22,5 +24,19 @@
     .wrapper {
     display: flex;
     justify-content: space-between;
+    }
+
+    .loginBtn {
+        color: white;
+        padding: 10px 15px;
+        background: transparent;
+        border: 1px solid black;
+        transition: 300ms;
+
+        &:hover,
+        &:focus {
+            background: $secondaryColor;
+            color: black;
+        }
     }
 }

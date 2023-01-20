@@ -274,11 +274,23 @@ html {
   border: 2px solid black;
 }
 
-header {
-  font-family: "Montserrat", sans-serif;
+* {
+  font-family: "Hind", sans-serif;
+  font-size: 22px;
+  font-size: 1.1rem;
 }
+
 header h1 {
   margin: 0;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .wrapper {
@@ -307,19 +319,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  padding: 5px 10px;
-  background: black;
-  color: white;
-  border: 1px solid transparent;
-  transition: 300ms;
-}
-button:hover {
-  background: white;
-  color: black;
-  border: 1px solid black;
-}
-
 textarea {
   resize: none;
   border: none;
@@ -327,7 +326,7 @@ textarea {
 
 header {
   min-width: 100%;
-  background: rgb(0, 34, 82);
+  background: rgb(137, 104, 125);
 }
 header h1 {
   color: rgb(255, 255, 255);
@@ -336,18 +335,31 @@ header .wrapper {
   display: flex;
 }
 
+body {
+  background-color: rgb(233, 235, 237);
+}
+body .notesContainer {
+  width: 75%;
+  margin: 0 auto;
+}
+body .sideNav {
+  width: 10%;
+}
+
 .loginBgContainer {
-  background: rgb(233, 235, 237);
-  height: calc(100vh - 57.9167px);
+  height: calc(100vh - 65.5333px);
+  width: 100%;
 }
 .loginBgContainer .wrapper {
   display: flex;
+  align-items: center;
 }
 .loginBgContainer h2 {
+  color: rgba(0, 0, 0, 0.8);
   width: 30%;
 }
 .loginBgContainer img {
-  width: 50%;
+  width: 80%;
 }
 
 .headerNav {
@@ -357,6 +369,17 @@ header .wrapper {
 .headerNav .wrapper {
   display: flex;
   justify-content: space-between;
+}
+.headerNav .loginBtn {
+  color: white;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1px solid black;
+  transition: 300ms;
+}
+.headerNav .loginBtn:hover, .headerNav .loginBtn:focus {
+  background: rgb(252, 216, 204);
+  color: black;
 }
 
 .addNoteInput {
@@ -369,25 +392,26 @@ header .wrapper {
 .notesForm textarea {
   margin-bottom: 10px;
   padding: 10px;
-  background: rgb(141, 217, 253);
+  background: rgb(255, 247, 236);
   outline: none;
   border: 1px solid transparent;
 }
 .notesForm textarea:focus, .notesForm textarea:hover {
-  border: 1px solid rgb(0, 34, 82);
+  border: 1px solid rgb(252, 216, 204);
   border-radius: 10px;
 }
 
 .formUl {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background: rgb(233, 235, 237);
 }
 
 .formLi {
-  width: 16.6666666667%;
   margin-bottom: 10px;
-  background: rgb(141, 217, 253);
+  background: rgb(255, 247, 236);
   border-radius: 10px;
 }
 .formLi:not(:last-child) {

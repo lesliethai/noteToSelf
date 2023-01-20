@@ -1,6 +1,18 @@
+* {
+    font-family: $baseFont;
+    @include fontSize(22);
+}
+
 header {
     h1 {
-        font-family: $headingFont;
         margin: 0;
     }
+}
+
+h1, h2 {
+    font-family: $headingFont;
+}
+
+h2 {
+    @include fontSize(30);
 }

@@ -26,7 +26,7 @@ const LoginPage = () => {
                     }
 
                     {/* change button text depending on login state */}
-                    <button onClick={handleClick}>{
+                    <button className="loginBtn" onClick={handleClick}>{
                         login
                             ? 'Log out'
                             : 'Log in'

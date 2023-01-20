@@ -2,7 +2,7 @@ const SideNav = () => {
     console.log('SideNav has rendered.');
 
     return (
-        <aside>
+        <aside class="sideNav">
             <nav>
                 <ul>
                     <li>Overview</li>

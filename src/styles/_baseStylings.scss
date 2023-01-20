@@ -24,20 +24,6 @@ a {
     text-decoration: none;
 }
 
-button {
-    padding: 5px 10px;
-    background: black;
-    color: white;
-    border: 1px solid transparent;
-    transition: 300ms;
-
-    &:hover {
-        background: white;
-        color: black;
-        border: 1px solid black;
-    }
-}
-
 textarea {
     resize: none;
     border: none;

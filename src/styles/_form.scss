@@ -23,11 +23,12 @@
 .formUl {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background: $grayColor;
 }
 
 .formLi {
-    width: calc(100%/6);
     margin-bottom: 10px;
     background: $tertiaryColor;
     border-radius: 10px;

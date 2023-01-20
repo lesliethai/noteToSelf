@@ -5,10 +5,10 @@ const HomePage = () => {
     console.log("HomePage has rendered.");
 
     return (
-        <>
-        <NotesContainer />
-        <SideNav />
-        </>
+        <body>
+            <SideNav />
+            <NotesContainer />
+        </body>
     )
 }
 

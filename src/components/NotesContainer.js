@@ -15,8 +15,7 @@ const NotesContainer = () => {
     const [ noteInput, setNoteInput ] = useState(false);
 
     return (
-        <>
-        <section>
+        <section className="notesContainer">
             <h2>Notes</h2>
             {/* open note input on click & disable button until note added */}
             <button onClick={handleClick}>+ add note</button>
@@ -29,7 +28,6 @@ const NotesContainer = () => {
             }
             <NotesList />
         </section>
-        </>
     )
 }
 
