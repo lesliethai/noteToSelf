@@ -5,7 +5,7 @@ const HomePage = () => {
     console.log("HomePage has rendered.");
 
     return (
-        <body>
+        <body className="bodyContainer">
             <SideNav />
             <NotesContainer />
         </body>

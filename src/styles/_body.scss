@@ -8,5 +8,11 @@ body {
 
     .sideNav {
         width: 10%;
+        text-align: right;
+    }
+
+    .bodyContainer {
+        display: flex;
+        margin: 50px 0 0 0;
     }
 }

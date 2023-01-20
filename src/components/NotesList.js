@@ -65,20 +65,22 @@ const NotesList = () => {
 
     return (
         <>
-            <ul className="formUl">
+            <ul className="formUl wrapper">
                 {
                     notes.map((note) => {
                         return (
                             <li key={note.key} className="formLi">
                                 <form action="#" method="#" className="notesForm">
+                                    <button onClick={() => handleDelete(note.key)} className="deleteButton"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
                                     <label htmlFor="noteTextarea" className="srOnly">note:</label>
                                     <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title} defaultValue={note.title} />
 
-                                    <button onClick={() => handleDelete(note.key)} className="deleteButton">Delete</button>
+                                    <div className="notesRight">
+                                        <button onClick= {(e) => updateHandler(e, note.key)} className="saveButton">Save</button>
 
-                                    <button onClick= {(e) => updateHandler(e, note.key)} className="updateButton">Update</button>
-
-                                    <span>Date: </span><span>{currentDate}</span>
+                                        <span className="dateLabelSpan">Date: </span><span className="dateSpan">{currentDate}</span>
+                                    </div>
                                 </form>
                             </li>
                         )

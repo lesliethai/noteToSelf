@@ -26,7 +26,7 @@ const NoteForm = () => {
             <label htmlFor="noteInput" className="srOnly">note:</label>
             <textarea name="noteInput" id="noteInput" cols="30" rows="10" placeholder="note.." onChange={checkInput} value={userInput} className="addNoteInput"></textarea>
 
-            <button onClick={submitHandler} disabled={!userInput}>Submit Note</button>
+            <button className="submitNoteBtn" onClick={submitHandler} disabled={!userInput}>Submit Note</button>
         </form>
     )
 }

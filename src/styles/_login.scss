@@ -27,16 +27,15 @@
     }
 
     .loginBtn {
-        color: white;
+        color: $black;
         padding: 10px 15px;
-        background: transparent;
+        background: $secondaryColor;
         border: 1px solid black;
-        transition: 300ms;
+        transition: 500ms;
 
-        &:hover,
-        &:focus {
-            background: $secondaryColor;
-            color: black;
+        &:hover {
+            background: $black;
+            color: $white;
         }
     }
 }
