@@ -1,4 +1,4 @@
-import Body from './Body';
+import NotesContainer from './NotesContainer';
 import SideNav from './SideNav';
 
 const HomePage = () => {
@@ -6,7 +6,7 @@ const HomePage = () => {
 
     return (
         <>
-        <Body />
+        <NotesContainer />
         <SideNav />
         </>
     )

@@ -274,6 +274,9 @@ html {
   border: 2px solid black;
 }
 
+header {
+  font-family: "Montserrat", sans-serif;
+}
 header h1 {
   margin: 0;
 }

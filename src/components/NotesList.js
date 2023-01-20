@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import firebase from '../firebase';
-import { getDatabase, ref, onValue, remove, set, update } from 'firebase/database';
+import { getDatabase, ref, onValue, remove, set } from 'firebase/database';
 
 const NotesList = () => {
     console.log('NotesList has rendered.');
@@ -44,6 +44,7 @@ const NotesList = () => {
     const updateHandler = (e, notesKey) => {
         e.preventDefault();
         const dbRefChild = ref(database, `${notesKey}`);;
+        alert('Updated!');
         return set(dbRefChild, updateNote);
     }
 
@@ -58,6 +59,9 @@ const NotesList = () => {
     let year = date.getFullYear();
     let currentDate = `${month} ${day} ${year}`
 
+    // trying out filter
+    const filter = notes.filter((term) => term.title.length <= 5);
+    console.log(filter);
 
     return (
         <>
@@ -68,7 +72,7 @@ const NotesList = () => {
                             <li key={note.key} className="formLi">
                                 <form action="#" method="#" className="notesForm">
                                     <label htmlFor="noteTextarea" className="srOnly">note:</label>
-                                    <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title}>{note.title}</textarea>
+                                    <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title} defaultValue={note.title} />
 
                                     <button onClick={() => handleDelete(note.key)} className="deleteButton">Delete</button>
 
