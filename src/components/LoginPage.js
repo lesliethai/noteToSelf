@@ -1,7 +1,7 @@
-import HomePage from './HomePage';
 import LoginBg from './LoginBg';
+import HeaderNav from './HeaderNav';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
     
@@ -11,7 +11,16 @@ const LoginPage = () => {
 
     const handleClick = () => {
         setLogin(!login);
+
+        // change url based on login state
+        if (login === false) {
+            navigate('/home-page');
+        } else if (login === true) {
+            navigate('/');
+        }
     }
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -19,19 +28,20 @@ const LoginPage = () => {
                 <div className="wrapper">
                     <h1>NTS</h1>
                     
-                    {/* if logged in, show user img; if not, show nothing*/}
-                    {
-                        login
-                        ? 'user img here'
-                        : null
-                    }
+                    <div className="headerRightContainer">
+                        {
+                            login
+                            ? <HeaderNav />
+                            : null
+                        }
 
-                    {/* change button text depending on login state */}
-                    <button className="loginBtn" onClick={handleClick}>{
-                        login
-                            ? 'Log out'
-                            : 'Log in'
-                    }</button>
+                        {/* change button text depending on login state */}
+                        <button className="loginBtn" onClick={handleClick}>{
+                            login
+                                ? 'Log out'
+                                : 'Log in'
+                        }</button>
+                    </div>
                 </div>
             </header>
             {/* <form action="#" method="#" className="loginForm">
@@ -42,10 +52,10 @@ const LoginPage = () => {
                 <input type="password" id="password" placeholder="password"></input>
             </form> */}
 
-            {/* if logged in, display home page - else, display login page */}
+            {/* if not logged in, display login page */}
             {
                 login
-                    ? <HomePage />
+                    ? null
                     : <LoginBg />
             } 
         </>

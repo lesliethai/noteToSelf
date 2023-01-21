@@ -3,18 +3,18 @@ body {
     width: 100%;
 
     .notesContainer {
-        width: 90%;
-        position: absolute;
-        right: 0px;
+        width: 100%;
     }
-
-    .sideNav {
-        width: 10%;
-        text-align: right;
-    }
-
+    
     .bodyContainer {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin: 50px 0 0 0;
+    }
+
+    .welcomePgImg {
+        max-width: 50%; 
     }
 }

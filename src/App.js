@@ -4,6 +4,7 @@ import './AppSetup.css';
 import { Routes, Route } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import NotesContainer from './components/NotesContainer';
+import HomePage from './components/HomePage';
 
 function App() {
   console.log('App has rendered.');
@@ -14,7 +15,8 @@ function App() {
 
     {/* define paths */}
     <Routes>
-      <Route path="/" element={ <NotesContainer />}/>
+      <Route path="/home-page" element={ <HomePage />} />
+      <Route path="/notes" element={ <NotesContainer />}/>
       <Route path="/contact-us" element={<ContactUs />} />
     </Routes>
     </>

@@ -71,7 +71,7 @@ const NotesList = () => {
                         return (
                             <li key={note.key} className="formLi">
                                 <form action="#" method="#" className="notesForm">
-                                    <button onClick={() => handleDelete(note.key)} className="deleteButton"><i class="fa-solid fa-xmark fa-lg"></i></button>
+                                    <button onClick={() => handleDelete(note.key)} className="deleteButton"><i className="fa-solid fa-xmark fa-lg"></i></button>
 
                                     <label htmlFor="noteTextarea" className="srOnly">note:</label>
                                     <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title} defaultValue={note.title} />

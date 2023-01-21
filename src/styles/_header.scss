@@ -9,4 +9,55 @@ header {
     .wrapper {
         display: flex;
     }
+
+    .headerRightContainer {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.headerNavLinks {
+    display: flex;
+
+    li:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    &:last-child {
+        margin-right: 25px;
+    }
+}
+
+.headerNav {
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .loginBtn {
+        color: $white;
+        padding: 5px 10px;
+        background: $black;
+        border: 1px solid black;
+        transition: 500ms;
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+
+    a {
+        color: $white;
+        border-bottom: 2px solid transparent;
+        transition: 500ms;
+
+        &:focus,
+        &:hover {
+            border-bottom: 2px solid black;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 .loginBgContainer {
-    height: calc(100vh - 65.3333px);
+    min-height: calc(100vh - 65.5333px);
     width: 100%;
 
     .wrapper {
@@ -13,29 +13,7 @@
     }
 
     img {
-        width: 80%;
+        width: 70%;
     }
 }
 
-.headerNav {
-    padding: 10px;
-    border-bottom: 1px solid black;
-
-    .wrapper {
-    display: flex;
-    justify-content: space-between;
-    }
-
-    .loginBtn {
-        color: $black;
-        padding: 10px 15px;
-        background: $secondaryColor;
-        border: 1px solid black;
-        transition: 500ms;
-
-        &:hover {
-            background: $black;
-            color: $white;
-        }
-    }
-}

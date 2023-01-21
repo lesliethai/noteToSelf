@@ -1,11 +1,10 @@
-import SideNav from './SideNav';
-
 const HomePage = () => {
     console.log("HomePage has rendered.");
 
     return (
         <body className="bodyContainer">
-            <SideNav />
+            <h2>Welcome back!</h2>
+            <img className="welcomePgImg" src={require("../assets/welcomePgBg.png")} alt="A brown and white beagle dog next to a table filled with books." />
         </body>
     )
 }

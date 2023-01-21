@@ -4,8 +4,8 @@ const LoginBg = () => {
     return (
         <section className="loginBgContainer">
             <div className="wrapper">
-                <h2>a cute note app for your daily needs</h2>
-                <img className="loginImg" src="/assets/loginPgImg2.png" alt="hehe"></img>
+                <h2>a little note app for your daily needs</h2>
+                <img className="loginImg" src={require("../assets/loginPgImg2.png")} alt="An individual surrounded by various objects, such as browsers, documents, and schedules." />
             </div>
         </section>
     )
