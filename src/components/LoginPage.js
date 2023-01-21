@@ -1,6 +1,7 @@
 import HomePage from './HomePage';
 import LoginBg from './LoginBg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
     

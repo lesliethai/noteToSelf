@@ -1,9 +1,11 @@
 body {
     background-color: $grayColor;
+    width: 100%;
 
     .notesContainer {
-        width: 75%;
-        margin: 0 auto;
+        width: 90%;
+        position: absolute;
+        right: 0px;
     }
 
     .sideNav {

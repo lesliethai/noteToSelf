@@ -1,5 +1,5 @@
 .wrapper {
-    max-width: 1400px;
+    max-width: 1500px;
     width: 80%;
     margin: 0 auto;
 }
@@ -31,4 +31,10 @@ textarea {
 
 button:hover {
     cursor: pointer;
+}
+
+textarea,
+input {
+    outline: none;
+    padding: 10px;
 }

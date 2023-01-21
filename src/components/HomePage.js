@@ -1,4 +1,3 @@
-import NotesContainer from './NotesContainer';
 import SideNav from './SideNav';
 
 const HomePage = () => {
@@ -7,7 +6,6 @@ const HomePage = () => {
     return (
         <body className="bodyContainer">
             <SideNav />
-            <NotesContainer />
         </body>
     )
 }

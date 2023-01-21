@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const SideNav = () => {
     console.log('SideNav has rendered.');
 
@@ -5,8 +7,8 @@ const SideNav = () => {
         <aside class="sideNav">
             <nav>
                 <ul>
-                    <li>Overview</li>
-                    <li>Contact Us</li>
+                    <Link to="/"><li>Overview</li></Link>
+                    <Link to="/contact-us"><li>Contact Us</li></Link>
                 </ul>
             </nav>
         </aside>
