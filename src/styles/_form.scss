@@ -117,10 +117,12 @@
     align-items: center;
     justify-content: center;
 
+
     textarea {
         padding: 10px;
         outline: none;
         transition: 500ms;
+        width: 90%;
         border: 3px solid $black;
 
         &:focus,

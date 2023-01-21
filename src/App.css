@@ -298,6 +298,41 @@ h2 {
   font-size: 1.25rem;
 }
 
+@media (max-width: 1000px) {
+  .loginBgContainer .wrapper {
+    flex-direction: column-reverse;
+  }
+  .loginBgContainer .wrapper h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .loginBgContainer img {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .bodyContainer .welcomePgImg {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .headerNav h1 {
+    margin-bottom: 20px;
+  }
+  .headerNav .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .headerRightContainer {
+    flex-direction: column;
+  }
+  .headerRightContainer button {
+    margin-top: 20px;
+  }
+  .headerRightContainer a {
+    font-size: 20px;
+    font-size: 1rem;
+  }
+}
 .wrapper {
   max-width: 1500px;
   width: 80%;
@@ -369,7 +404,6 @@ header .headerRightContainer {
   border-bottom: 1px solid black;
 }
 .headerNav .wrapper {
-  display: flex;
   justify-content: space-between;
 }
 .headerNav .loginBtn {
@@ -407,7 +441,7 @@ body .bodyContainer {
   margin: 50px 0 0 0;
 }
 body .welcomePgImg {
-  max-width: 50%;
+  width: 50%;
 }
 
 .loginBgContainer {
@@ -531,6 +565,7 @@ body .welcomePgImg {
   padding: 10px;
   outline: none;
   transition: 500ms;
+  width: 90%;
   border: 3px solid rgb(0, 0, 0);
 }
 .noteInput textarea:focus, .noteInput textarea:hover {
