@@ -445,7 +445,7 @@ body .welcomePgImg {
 }
 
 .loginBgContainer {
-  min-height: calc(100vh - 65.5333px);
+  min-height: calc(100vh - 100px);
   width: 100%;
 }
 .loginBgContainer .wrapper {
@@ -457,7 +457,7 @@ body .welcomePgImg {
   width: 30%;
 }
 .loginBgContainer img {
-  width: 70%;
+  width: 65%;
 }
 
 .addNoteInput {
@@ -625,4 +625,12 @@ body .welcomePgImg {
   padding: 3px 5px;
   margin: 10px 0 30px 0;
   transition: 300ms;
+}
+
+footer {
+  background: rgb(137, 104, 125);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5.5px;
+  border-top: 1px solid rgb(0, 0, 0);
 }/*# sourceMappingURL=App.css.map */
