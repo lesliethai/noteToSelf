@@ -20,17 +20,17 @@ const ContactUs = () => {
             <form onSubmit={handleClick} action="#" method="#" className="contactForm" name="contactForm" id="contactForm">
 
                 <div className="nameFlexContainer">
-                    <label for="firstName" className="srOnly">Name</label>
+                    <label htmlFor="firstName" className="srOnly">Name</label>
                     <input ref={firstRef} type="text" id="firstName" name="lastName" placeholder="first name" className="firstName" required />
 
-                    <label for="lastName" className="srOnly">Name</label>
+                    <label htmlFor="lastName" className="srOnly">Name</label>
                     <input ref={lastRef} type="text" id="lastName" name="lastName" placeholder="last name" className="lastName" required />
                 </div>
 
-                <label for="email" className="srOnly">Email</label>
+                <label htmlFor="email" className="srOnly">Email</label>
                 <input ref={emailRef} type="email" id="email" name="email" placeholder="email" required />
 
-                <label for="message" className="srOnly">message</label>
+                <label htmlFor="message" className="srOnly">message</label>
                 <textarea ref={messageRef} name="message" id="message" cols="30" rows="10" placeholder="message" required />
                 <div className="btnContainer">
                     <button className="submitBtn" value="submit">submit</button>

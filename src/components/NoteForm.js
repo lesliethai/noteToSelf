@@ -20,7 +20,6 @@ const NoteForm = () => {
         setUserInput('');
     }
 
-
     return(
         <form action="#" method="#" className="noteInput">
             <label htmlFor="noteInput" className="srOnly">note:</label>

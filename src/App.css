@@ -538,7 +538,7 @@ body .welcomePgImg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 .notesContainer h2 {
   margin-bottom: 15px;
@@ -613,6 +613,7 @@ body .welcomePgImg {
 .contactUsForm textarea {
   border-bottom: 3px solid transparent;
   box-shadow: 0.5px 0.5px 3px 0.5px rgba(0, 0, 0, 0.2);
+  transition: 300ms;
 }
 .contactUsForm input:focus, .contactUsForm input:hover,
 .contactUsForm textarea:focus,
@@ -620,11 +621,44 @@ body .welcomePgImg {
   border-bottom: 3px solid rgb(137, 104, 125);
 }
 .contactUsForm button {
+  border: none;
+  height: 100%;
+  background: rgb(137, 104, 125);
+  color: rgb(255, 255, 255);
+  padding: 0 20px;
+  transition: 500ms;
+  margin-top: 20px;
+}
+.contactUsForm button:hover, .contactUsForm button:focus {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.clearForm {
+  margin-bottom: 25px;
+}
+.clearForm button,
+.clearForm input {
+  transition: 500ms;
+}
+.clearForm button {
+  border: none;
+  height: 100%;
+  background: rgb(137, 104, 125);
+  color: rgb(255, 255, 255);
+  padding: 0 20px;
+}
+.clearForm button:hover, .clearForm button:focus {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.clearForm input {
   border: 1px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  padding: 3px 5px;
-  margin: 10px 0 30px 0;
-  transition: 300ms;
+  border: 3px solid transparent;
+  box-shadow: 0.5px 0.5px 3px 0.5px rgba(0, 0, 0, 0.2);
+}
+.clearForm input:focus, .clearForm input:hover {
+  border: 3px solid rgb(137, 104, 125);
 }
 
 footer {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import firebase from '../firebase';
 import { getDatabase, ref, onValue, remove, set } from 'firebase/database';
+import Filter from './Filter';
 
 const NotesList = () => {
     console.log('NotesList has rendered.');
@@ -8,7 +9,8 @@ const NotesList = () => {
     // initalize state to keep track of adding note
     const [ notes, setNotes ] = useState([]);
     const [ updateNote, setUpdateNote] = useState('');
-
+    const [ filter, setFilter ] = useState('');
+    
     // initializing database
     const database = getDatabase(firebase);
     const dbRef = ref(database);
@@ -52,21 +54,15 @@ const NotesList = () => {
         setUpdateNote(e.target.value);
     }
 
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-    let currentDate = `${month} ${day} ${year}`
-
-    // trying out filter
-    const filter = notes.filter((term) => term.title.length <= 5);
-    console.log(filter);
+    // make filtered array based on searched term
+    let search = notes.filter(term => term.title.includes(filter));
 
     return (
         <>
+        <Filter array={notes} filterState={setFilter} filter={filter} />
             <ul className="formUl wrapper">
                 {
-                    notes.map((note) => {
+                    search.map((note) => {
                         return (
                             <li key={note.key} className="formLi">
                                 <form action="#" method="#" className="notesForm">
@@ -77,14 +73,12 @@ const NotesList = () => {
 
                                     <div className="notesRight">
                                         <button onClick= {(e) => updateHandler(e, note.key)} className="saveButton">Save</button>
-
-                                        <span className="dateLabelSpan">Date: </span><span className="dateSpan">{currentDate}</span>
                                     </div>
                                 </form>
                             </li>
                         )
                     })
-                }
+                } 
             </ul>
         </>
     )
