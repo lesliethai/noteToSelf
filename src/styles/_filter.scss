@@ -1,6 +1,7 @@
 .clearForm {
     margin-bottom: 25px;
-    
+    height: 100%;
+
     button,
     input {
         transition: 500ms;
@@ -8,7 +9,7 @@
 
     button {
         border: none;
-        height: 100%;
+        height: 49px;
         background: $primaryColor;
         color: $white;
         padding: 0 20px;

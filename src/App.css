@@ -333,6 +333,13 @@ h2 {
     font-size: 1rem;
   }
 }
+@media (max-width: 400px) {
+  .clearForm button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
 .wrapper {
   max-width: 1500px;
   width: 80%;
@@ -584,6 +591,7 @@ body .welcomePgImg {
   text-align: center;
   max-width: 600px;
   margin-top: 50px;
+  height: 100%;
 }
 .contactUsForm h2 {
   margin-bottom: 20px;
@@ -636,6 +644,7 @@ body .welcomePgImg {
 
 .clearForm {
   margin-bottom: 25px;
+  height: 100%;
 }
 .clearForm button,
 .clearForm input {
@@ -643,7 +652,7 @@ body .welcomePgImg {
 }
 .clearForm button {
   border: none;
-  height: 100%;
+  height: 49px;
   background: rgb(137, 104, 125);
   color: rgb(255, 255, 255);
   padding: 0 20px;

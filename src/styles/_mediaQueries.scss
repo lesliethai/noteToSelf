@@ -48,3 +48,11 @@
         }
     }
 }
+
+@media (max-width: 400px) {
+    .clearForm button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

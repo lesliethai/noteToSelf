@@ -22,7 +22,7 @@ const Filter = (props) => {
             <label htmlFor="searchInput" className="srOnly">search:</label>
             <input ref={searchRef} onChange={checkInput} type="text" id="searchInput" name="search" placeholder="search" />
 
-        <button>Clear</button>
+            <button>Clear</button>
         </form>
     )
 }
