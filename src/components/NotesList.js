@@ -49,7 +49,6 @@ const NotesList = () => {
     }
 
     const checkUpdate = (e) => {
-        console.log(e.target.value);
         setUpdateNote(e.target.value);
     }
 
@@ -90,5 +89,5 @@ const NotesList = () => {
         </>
     )
 }
-// error: values argument must be an object containing the children to replace -- but if you put in values argument, it's blank
+
 export default NotesList;

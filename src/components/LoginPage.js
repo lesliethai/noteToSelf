@@ -44,7 +44,8 @@ const LoginPage = () => {
                     </div>
                 </div>
             </header>
-            {/* <form action="#" method="#" className="loginForm">
+
+            {/* will come back - <form action="#" method="#" className="loginForm">
                 <label htmlFor="username" className="srOnly">username:</label>
                 <input type="text" id="username" placeholder="username"/>
 

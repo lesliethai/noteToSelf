@@ -612,6 +612,7 @@ body .welcomePgImg {
 .contactUsForm input,
 .contactUsForm textarea {
   border-bottom: 3px solid transparent;
+  box-shadow: 0.5px 0.5px 3px 0.5px rgba(0, 0, 0, 0.2);
 }
 .contactUsForm input:focus, .contactUsForm input:hover,
 .contactUsForm textarea:focus,
