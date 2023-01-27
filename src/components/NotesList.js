@@ -50,7 +50,7 @@ const NotesList = () => {
     }
 
     const checkUpdate = (e) => {
-        setUpdateNote(e.target.value);
+        setUpdateNote(e.target.value.toLowerCase());
     }
 
     // make filtered array based on searched term

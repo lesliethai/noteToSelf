@@ -5,7 +5,7 @@ const Filter = (props) => {
     // check user input and update filter state to searched term
     const checkInput = (e) => {
         console.log(e.target.value);
-        props.filterState(e.target.value);
+        props.filterState(e.target.value.toLowerCase());
     }
 
     const searchRef = useRef(null);
