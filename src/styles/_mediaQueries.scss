@@ -1,0 +1,58 @@
+@media (max-width: 1000px) {
+    .loginBgContainer {
+
+        .wrapper {
+            flex-direction: column-reverse;
+
+            h2 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+
+        img {
+            margin-top: 50px;
+            width: 100%;
+        }
+    }
+    .bodyContainer {
+        .welcomePgImg {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .headerNav {
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .wrapper {
+        flex-direction: column;
+        align-items: center;
+        }
+    }
+
+    .headerRightContainer {
+        flex-direction: column;
+
+        button {
+            margin-top: 20px;
+        }
+
+        a {
+            @include fontSize(20);
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .clearForm button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

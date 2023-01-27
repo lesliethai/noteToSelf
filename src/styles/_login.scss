@@ -1,0 +1,19 @@
+.loginBgContainer {
+    min-height: calc(100vh - 108px);
+    width: 100%;
+
+    .wrapper {
+        display: flex; 
+        align-items: center;
+    }
+
+    h2 {
+        color: rgba($color: $black, $alpha: 0.8);
+        width: 30%;
+    }
+
+    img {
+        width: 65%;
+    }
+}
+

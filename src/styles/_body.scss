@@ -1,0 +1,20 @@
+body {
+    background-color: $grayColor;
+    width: 100%;
+
+    .notesContainer {
+        width: 100%;
+    }
+    
+    .bodyContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 0 0;
+    }
+
+    .welcomePgImg {
+        width: 50%; 
+    }
+}
