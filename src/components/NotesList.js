@@ -4,7 +4,6 @@ import { getDatabase, ref, onValue, remove, set } from 'firebase/database';
 import Filter from './Filter';
 
 const NotesList = () => {
-    console.log('NotesList has rendered.');
 
     // initalize state to keep track of adding note
     const [ notes, setNotes ] = useState([]);

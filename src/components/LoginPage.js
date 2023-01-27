@@ -1,12 +1,11 @@
 import LoginBg from './LoginBg';
 import HeaderNav from './HeaderNav';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const LoginPage = () => {
     
-    console.log('LoginPage has rendered.');
-
+    // track if user clicks log in/log out
     const [login, setLogin] = useState(false);
 
     const handleClick = () => {
@@ -26,7 +25,12 @@ const LoginPage = () => {
         <>
             <header className="headerNav">
                 <div className="wrapper">
-                    <h1>NTS</h1>
+                    {/* direct to home page or login page based on login status */}
+                    {
+                        login
+                        ? <Link to="/home-page"><h1>NTS</h1></Link>
+                        : <Link to="/"><h1>NTS</h1></Link>
+                    }
                     
                     <div className="headerRightContainer">
                         {
@@ -44,14 +48,6 @@ const LoginPage = () => {
                     </div>
                 </div>
             </header>
-
-            {/* will come back - <form action="#" method="#" className="loginForm">
-                <label htmlFor="username" className="srOnly">username:</label>
-                <input type="text" id="username" placeholder="username"/>
-
-                <label htmlFor="password" className="srOnly">password:</label>
-                <input type="password" id="password" placeholder="password"></input>
-            </form> */}
 
             {/* if not logged in, display login page */}
             {

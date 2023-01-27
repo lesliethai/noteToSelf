@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 
 const NotesContainer = () => {
-    console.log('NotesContainer has rendered.');
 
     // show note input on click
     const handleClick = () => {
@@ -18,7 +17,11 @@ const NotesContainer = () => {
         <section className="notesContainer">
             <h2>Notes</h2>
             {/* open note input on click & disable button until note added */}
-            <button className="addNoteBtn" onClick={handleClick}>+ add note</button>
+            <button className="addNoteBtn" onClick={handleClick}>{
+            noteInput
+            ? '- minimize add note'
+            : '+ add note'
+            }</button>
 
             {/* on click, show input */}
             {

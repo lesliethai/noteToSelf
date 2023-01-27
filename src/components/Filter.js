@@ -19,7 +19,7 @@ const Filter = (props) => {
 
     return (
         <form className="clearForm" onSubmit={handleSubmit} action="#" method="#">
-            <label htmlFor="searchInput" className="srOnly">search:</label>
+            <label htmlFor="searchInput" className="srOnly">Search:</label>
             <input ref={searchRef} onChange={checkInput} type="text" id="searchInput" name="search" placeholder="search" />
 
             <button>Clear</button>

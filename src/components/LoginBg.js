@@ -1,7 +1,6 @@
 import Footer from './Footer';
 
 const LoginBg = () => {
-    console.log('LoginBg has rendered.');
 
     return (
         <>

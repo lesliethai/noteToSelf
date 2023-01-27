@@ -4,4 +4,14 @@ footer {
     text-align: center;
     padding: 5.5px;
     border-top: 1px solid $black;
+
+    a {
+        color: white;
+        transition: 300ms;
+
+        &:hover,
+        &:focus {
+            color: $black;
+        }
+    }
 }
