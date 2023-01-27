@@ -19,6 +19,7 @@ const NoteForm = () => {
         const database = getDatabase(firebase);
         const dbRef = ref(database);
         push(dbRef, userInput);
+        alert('Note added!');
         setUserInput('');
     }
 

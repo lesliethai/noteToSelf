@@ -54,29 +54,33 @@ const NotesList = () => {
     }
 
     // make filtered array based on searched term
-    let search = notes.filter(term => term.title.includes(filter));
+    let search = notes.filter(term => term.title.includes(filter))
+        .map((note) => {
+            return (
+                <li key={note.key} className="formLi">
+                    <form action="#" method="#" className="notesForm">
+                        <button onClick={() => handleDelete(note.key)} className="deleteButton"><i className="fa-solid fa-xmark fa-lg"></i></button>
+
+                        <label htmlFor="noteTextarea" className="srOnly">note:</label>
+                        <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title} defaultValue={note.title} />
+
+                        <div className="notesRight">
+                            <button onClick={(e) => updateHandler(e, note.key)} className="saveButton">Save</button>
+                        </div>
+                    </form>
+                </li>
+            )
+    })
 
     return (
         <>
         <Filter array={notes} filterState={setFilter} filter={filter} />
             <ul className="formUl wrapper">
                 {
-                    search.map((note) => {
-                        return (
-                            <li key={note.key} className="formLi">
-                                <form action="#" method="#" className="notesForm">
-                                    <button onClick={() => handleDelete(note.key)} className="deleteButton"><i className="fa-solid fa-xmark fa-lg"></i></button>
-
-                                    <label htmlFor="noteTextarea" className="srOnly">note:</label>
-                                    <textarea name="input" id="input" cols="30" rows="10" onChange={checkUpdate} value={updateNote.title} defaultValue={note.title} />
-
-                                    <div className="notesRight">
-                                        <button onClick= {(e) => updateHandler(e, note.key)} className="saveButton">Save</button>
-                                    </div>
-                                </form>
-                            </li>
-                        )
-                    })
+                    // if search pulls up no results, display error message. else, display results
+                    search.length === 0
+                    ? <p>No results found.</p>
+                    : search
                 } 
             </ul>
         </>
