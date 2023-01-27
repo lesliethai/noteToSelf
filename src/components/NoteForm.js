@@ -10,7 +10,7 @@ const NoteForm = () => {
 
     // set user input to state
     const checkInput = (e) => {
-        setUserInput(e.target.value);
+        setUserInput(e.target.value.toLowerCase());
     }
     
     // push user input to firebase
