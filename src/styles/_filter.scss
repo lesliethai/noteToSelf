@@ -1,6 +1,6 @@
 .clearForm {
     margin-bottom: 25px;
-    height: 100%;
+    display: flex;
 
     button,
     input {
@@ -9,7 +9,6 @@
 
     button {
         border: none;
-        height: 49px;
         background: $primaryColor;
         color: $white;
         padding: 0 20px;
