@@ -74,7 +74,7 @@ const NotesList = () => {
 
     return (
         <>
-        <Filter array={notes} filterState={setFilter} filter={filter} />
+        <Filter filterState={setFilter} filter={filter} />
             <ul className="formUl wrapper">
                 {
                     // if search pulls up no results, display error message. else, display results
