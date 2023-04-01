@@ -4,7 +4,6 @@ const Filter = (props) => {
 
     // check user input and update filter state to searched term
     const checkInput = (e) => {
-        console.log(e.target.value);
         props.filterState(e.target.value.toLowerCase());
     }
 
@@ -21,7 +20,6 @@ const Filter = (props) => {
         <form className="clearForm" onSubmit={handleSubmit} action="#" method="#">
             <label htmlFor="searchInput" className="srOnly">Search:</label>
             <input ref={searchRef} onChange={checkInput} type="text" id="searchInput" name="search" placeholder="search" />
-
             <button>Clear</button>
         </form>
     )

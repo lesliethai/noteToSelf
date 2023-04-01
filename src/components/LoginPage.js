@@ -1,4 +1,4 @@
-import LoginBg from './LoginBg';
+import Footer from './Footer';
 import HeaderNav from './HeaderNav';
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -53,7 +53,15 @@ const LoginPage = () => {
             {
                 login
                     ? null
-                    : <LoginBg />
+                    : <><main><section className="loginBgContainer">
+                            <div className="wrapper">
+                                <h2>a little note app for your daily needs</h2>
+                                <img className="loginImg" src={require("../assets/loginPgImg2.png")} alt="An individual surrounded by various objects, such as browsers, documents, and schedules." />
+                            </div>
+                        </section>
+                        </main>
+                        <Footer />
+                    </>
             } 
         </>
     )
